@@ -244,13 +244,14 @@ var Datetime = React.createClass({
 			this.setState({
 				selectedDate: date,
 				viewDate: date.clone().startOf('month'),
-				inputValue: date.format( this.state.inputFormat )
+				inputValue: date.format( this.state.inputFormat ),
+				open:false
 			});
 		}
 
-		if (this.props.closeOnSelect && close) {
-			this.closeCalendar();
-		}
+		// if (this.props.closeOnSelect && close) {
+		// 	this.closeCalendar();
+		// }
 
 		this.props.onChange( date );
 	},
